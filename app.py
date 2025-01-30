@@ -2,8 +2,10 @@ import os
 import mysql.connector
 from flask import Flask, jsonify, request
 from datetime import datetime
+from flask_cors import CORS  # Opcional para CORS
 
 app = Flask(__name__)
+CORS(app)  # Opcional: Habilitar CORS para desarrollo
 
 # Configuración de la base de datos
 DB_CONFIG = {
